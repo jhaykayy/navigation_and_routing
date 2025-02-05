@@ -16,17 +16,26 @@ class RegistrationScreen extends StatelessWidget {
                 'Welcome to the Registration Screen',
                 style: TextStyle(fontSize: 20),
               ),
+
+              const SizedBox(height: 20,),
+
               _navigationButton(
                 context,
                 routeName: '/details',
                 buttonText: 'Go to Details Screen',
                 arguments: {'message': 'Hello from Registration Screen'},
               ),
+
+              const SizedBox(height: 20,),
+
               _navigationButton(
                 context,
                 routeName: '/settings',
                 buttonText: 'Go to Settings Screen',
               ),
+
+              const SizedBox(height: 20,),
+
               _navigationButton(
                 context,
                 routeName: '/profile',
