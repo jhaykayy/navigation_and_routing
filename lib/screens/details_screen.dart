@@ -12,9 +12,9 @@ class DetailsScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                arguments != null ? arguments['message'] ?? 'No Data Passed' : 'No Data Passed',
-                style: const TextStyle(fontSize: 20, color: Colors.black),
+              const Text(
+                "Welome to details screen",
+                style: TextStyle(fontSize: 20, color: Colors.black),
               ),
               ElevatedButton(
                 onPressed: () {

@@ -1,26 +1,30 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
+class LogoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile')),
+      appBar: AppBar(
+        title: const Text("Logout"),
+      ),
       body: Container(
-        color: Colors.orangeAccent,
+        color: Colors.purple,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
-                'Profile Screen',
+                "Logout Screen",
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/details');
-                },
-                child: const Text('Go to Details Screen'),
-              ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/', arguments: {
+                      'message': 'i just logged out'
+                    });
+                  },
+                  child: const Text("This is the last page of the screen"),
+                  )
             ],
           ),
         ),

@@ -23,7 +23,7 @@ class RegistrationScreen extends StatelessWidget {
                 context,
                 routeName: '/details',
                 buttonText: 'Go to Details Screen',
-                arguments: {'message': 'Hello from Registration Screen'},
+               // arguments: {'message': 'Hello from Registration Screen'},
               ),
 
               const SizedBox(height: 20,),
@@ -41,6 +41,14 @@ class RegistrationScreen extends StatelessWidget {
                 routeName: '/profile',
                 buttonText: 'Go to Profile Screen',
               ),
+
+              const SizedBox(height: 20,),
+
+              _navigationButton(
+                context,
+                routeName: '/logout',
+                buttonText: 'Go to logout Screen',
+              ),
             ],
           ),
         ),
@@ -51,11 +59,11 @@ class RegistrationScreen extends StatelessWidget {
   Widget _navigationButton(BuildContext context, {
     required String routeName,
     required String buttonText,
-    Map<String, String>? arguments,
+   // Map<String, String>? arguments,
   }) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.pushNamed(context, routeName, arguments: arguments);
+        Navigator.pushNamed(context, routeName);
       },
       child: Text(buttonText),
     );
